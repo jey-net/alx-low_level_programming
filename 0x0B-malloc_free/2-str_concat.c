@@ -22,11 +22,18 @@ char *str_concat(char *s1, char *s2)
 		{
 			i = 0;
 			while (s1[i++] != '\0')
+				len1++;
+		}
+
+		if (s2 != NULL)
+		{
+			i = 0;
+			while (s2[i++] != '\0')
 				len2++;
 		}
-		
+
 		len = len1 + len2;
-		result = (char *)malloc/(sizeof(char) * (len + 1));
+		result = (char *)malloc(sizeof(char) * (len + 1));
 		if (result == NULL)
 			return (NULL);
 
